@@ -1,0 +1,35 @@
+version: '3'
+services:
+  dbApp:
+    image: postgres:10-alpine
+    volumes:
+      - ./storage/dbApp:/var/lib/postgresql
+  db01:
+    image: postgres:10-alpine
+    volumes:
+      - ./storage/db01:/var/lib/postgresql
+
+  db02:
+    image: postgres:10-alpine
+    volumes:
+      - ./storage/db02:/var/lib/postgresql
+
+  db03:
+    image: postgres:10-alpine
+    volumes:
+      - ./storage/db03:/var/lib/postgresql
+
+  db04:
+    image: postgres:10-alpine
+    volumes:
+      - ./storage/db04:/var/lib/postgresql
+
+  db05:
+    image: postgres:10-alpine
+    volumes:
+      - ./storage/db05:/var/lib/postgresql
+
+  db06:
+    image: postgres:10-alpine
+    volumes:
+      - ./storage/db06:/var/lib/postgresql
