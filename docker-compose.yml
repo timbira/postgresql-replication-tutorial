@@ -1,62 +1,35 @@
-version: '2'
+version: '3'
 services:
   dbApp:
     image: postgres:10-alpine
     volumes:
       - ./storage/dbApp:/var/lib/postgresql
-    networks:
-      db-network:
-        aliases:
-          - dbApp
   db01:
     image: postgres:10-alpine
     volumes:
       - ./storage/db01:/var/lib/postgresql
-    networks:
-      db-network:
-        aliases:
-          - db01
+
   db02:
     image: postgres:10-alpine
     volumes:
       - ./storage/db02:/var/lib/postgresql
-    networks:
-      db-network:
-        aliases:
-          - db02
+
   db03:
     image: postgres:10-alpine
     volumes:
       - ./storage/db03:/var/lib/postgresql
-    networks:
-      db-network:
-        aliases:
-          - db03
+
   db04:
     image: postgres:10-alpine
     volumes:
       - ./storage/db04:/var/lib/postgresql
-    networks:
-      db-network:
-        aliases:
-          - db04
+
   db05:
     image: postgres:10-alpine
     volumes:
       - ./storage/db05:/var/lib/postgresql
-    networks:
-      db-network:
-        aliases:
-          - db05
+
   db06:
     image: postgres:10-alpine
     volumes:
       - ./storage/db06:/var/lib/postgresql
-    networks:
-      db-network:
-        aliases:
-          - db06
-
-networks:
-  db-network:
-    driver: bridge
